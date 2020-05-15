@@ -1,0 +1,21 @@
+﻿@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.EditUserViewModel
+
+<h1>@Model.User.UserName</h1>
+
+<div>
+    @Html.HiddenFor(m => m.User.UserId)
+    <div>
+        @Html.LabelFor(m => m.User.UserName)
+        @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.User.UserName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.User.Membership.Email)
+        @Html.TextBoxFor(m => m.User.Membership.Email, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.NewPassword)
+        @Html.TextBoxFor(m => m.NewPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.NewPassword)
+    </div>
+</div>

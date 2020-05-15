@@ -1,0 +1,23 @@
+﻿@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.PasswordResetViewModel
+
+<h3>@Model.User.UserName</h3>
+
+<div>
+    @Html.HiddenFor(m => m.User.UserId)
+    @Html.HiddenFor(m => m.ActionId)
+    <div>
+        @Html.LabelFor(m => m.SecurityCode)
+        @Html.TextBoxFor(m => m.SecurityCode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.SecurityCode)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.NewPassword)
+        @Html.TextBoxFor(m => m.NewPassword, new { @class = "form-control", type = "password" })
+        @Html.ValidationMessageFor(m => m.NewPassword)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.NewPasswordConfirm)
+        @Html.TextBoxFor(m => m.NewPasswordConfirm, new { @class = "form-control", type = "password" })
+        @Html.ValidationMessageFor(m => m.NewPasswordConfirm)
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.EditUserViewModel
+
+<h4>Edit User</h4>
+
+@using (Html.BeginForm("EditUser", "GeocortexIdentityManager", FormMethod.Post))
+{
+    @Html.EditorForModel("User")
+    <input type="submit" value="Save" />
+}

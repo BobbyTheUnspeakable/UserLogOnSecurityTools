@@ -1,0 +1,9 @@
+﻿@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.PasswordChangeRequestViewModel
+
+<div>
+    <div>
+        @Html.LabelFor(m => m.UserName)
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @readonly = "readonly" })
+        @Html.ValidationMessageFor(m => m.UserName)
+    </div>
+</div>

@@ -1,0 +1,9 @@
+@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.MultiFactorAuthConfirmViewModel
+
+<h4 class="pageHeader">Confirmation</h4>
+
+@using (Html.BeginForm("MultiFactorAuthConfirm", "GeocortexIdentityManager", FormMethod.Post))
+{
+    @Html.EditorForModel("AuthConfirm")
+    <input type="submit" value="Submit" />
+}

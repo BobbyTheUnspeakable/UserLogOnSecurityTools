@@ -1,0 +1,20 @@
+@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.PasswordSetViewModel
+
+<h3>@Model.User.UserName</h3>
+
+<div>
+    @Html.HiddenFor(m => m.ActionId)
+    @Html.HiddenFor(m => m.UserId)
+    @Html.HiddenFor(m => m.ClientFolder)
+
+    <div>
+        @Html.LabelFor(m => m.NewPassword)
+        @Html.TextBoxFor(m => m.NewPassword, new { @class = "form-control", type = "password" })
+        @Html.ValidationMessageFor(m => m.NewPassword)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.NewPasswordConfirm)
+        @Html.TextBoxFor(m => m.NewPasswordConfirm, new { @class = "form-control", type = "password" })
+        @Html.ValidationMessageFor(m => m.NewPasswordConfirm)
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.UsersViewModel
+
+<h1 class="pageHeader">Users</h1>
+
+<div class="tables" id="users-table">
+    <div class="scroller">
+        <table class="data-table cell-border compact hover stripe">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Last Logon</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var u in Model.Users)
+                {
+                    <tr>
+                        <td>@u.UserId</td>
+                        <td>@u.UserName</td>
+                        <td>@u.Email</td>
+                        <td>@u.LogOnDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

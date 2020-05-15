@@ -1,0 +1,11 @@
+﻿@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.MultiFactorAuthViewModel
+
+<p class="pageHeader">Multi-Factor Authentication</p>
+
+<p>Please enter your Skyview username. You will receive an e-mail with a link to verify your account.</p>
+
+@using (Html.BeginForm("MultiFactorAuth", "GeocortexIdentityManager", FormMethod.Post))
+{
+    @Html.EditorForModel("Auth")
+    <input type="submit" value="Submit" />
+}

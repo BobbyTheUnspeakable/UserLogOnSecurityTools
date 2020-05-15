@@ -1,0 +1,10 @@
+@model UserLogOnSecurityTools.Models.GeocortexIdentityManagerViewModels.MultiFactorAuthViewModel
+
+<div>
+    @Html.HiddenFor(m => m.Passthrough)
+    <div>
+        @Html.LabelFor(m => m.UserName)
+        @Html.TextBoxFor(m => m.UserName, new {@class = "form-control"})
+        @Html.ValidationMessageFor(m => m.UserName)
+    </div>
+</div>
